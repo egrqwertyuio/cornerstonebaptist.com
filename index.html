@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cornerstone Baptist Church</title>
+
+  <!-- KJV-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{
+      --bg:#ffffff; --text:#122031; --brand:#00558c; --accent:#f2b428; --line:#e9eef4;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"EB Garamond", Garamond, "Times New Roman", Times, serif;line-height:1.65}
+    img,video{max-width:100%;display:block}
+
+    /* Hero */
+    .hero{position:relative;width:100%;overflow:hidden;box-shadow:var(--shadow);background:#000}
+    .hero-image{width:100%;height:auto;display:block}
+    .overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;
+      padding:clamp(1rem,1.5vw + 1rem,3rem);text-align:center;color:#fff;
+      background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.55) 100%)}
+    .logo{width:clamp(80px,10vw,120px);height:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.3))}
+    .overlay h1{margin:.25rem 0 0;font-weight:700;letter-spacing:.2px;font-size:clamp(1.35rem,1.1rem + 1.5vw,2.35rem);text-shadow:0 2px 14px rgba(0,0,0,.35)}
+
+    /* Nav */
+    nav{margin-top:.5rem;display:flex;flex-wrap:wrap;gap:.5rem .75rem;justify-content:center}
+    nav a{color:#0b1a28;background:#fff;border:1px solid rgba(255,255,255,.6);text-decoration:none;font-weight:700;
+      padding:.5rem .85rem;border-radius:999px;transition:.2s ease;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+    nav a:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+
+    /* Main & Cards */
+    main{width:min(100%,1200px);margin:auto;padding:clamp(1rem,1.5vw + 1rem,2.5rem);display:grid;grid-template-columns:1fr;gap:clamp(1rem,1.2vw,1.5rem)}
+    section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(1rem,1.2rem + .6vw,1.75rem);box-shadow:var(--shadow)}
+    h2{margin:0 0 .8rem;color:var(--brand);font-weight:700;font-size:clamp(1.1rem,1rem + .9vw,1.6rem);position:relative;padding-bottom:.25rem}
+    h2::after{content:"";position:absolute;left:0;bottom:-6px;height:3px;width:64px;background:linear-gradient(90deg,var(--accent),#ffd86b);border-radius:4px}
+    section p, section li{font-size:clamp(1rem,.95rem + .25vw,1.15rem)}
+
+    /* Gallery grid (existing items) */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(.75rem,1vw,1.25rem);margin-top:.75rem}
+    .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid #e6edf3;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s, filter .25s}
+    .gallery img:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.12);filter:saturate(110%)}
+
+    /* VBS 2025 subheading */
+    .subheading{margin-top:1.5rem;font-size:1.25rem;color:var(--brand);border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.25rem}
+
+    /* Carousel */
+    .carousel-container{position:relative;overflow:hidden;margin-top:1rem;border-radius:12px;box-shadow:var(--shadow)}
+    .carousel-track{display:flex;transition:transform .4s ease-in-out;touch-action:pan-y}
+    .carousel-slide{min-width:100%;box-sizing:border-box;background:#000}
+    .carousel-slide img,.carousel-slide video{width:100%;height:auto;display:block;border-radius:12px}
+    .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:#fff;border:none;font-size:2rem;
+      padding:.5rem .75rem;cursor:pointer;z-index:5;border-radius:50%;transition:background .3s}
+    .carousel-btn:hover{background:rgba(0,0,0,.6)}
+    .carousel-btn.prev{left:10px}.carousel-btn.next{right:10px}
+
+    /* Footer (parking image) */
+    footer{position:relative;min-height:260px;background:url('assets/images/parking.png') center/cover no-repeat;display:flex;align-items:flex-end;justify-content:center;
+      margin-top:clamp(1rem,1.5vw,2rem);border-top:1px solid var(--line);box-shadow:inset 0 80px 120px rgba(0,0,0,.25)}
+    .footer-overlay{width:100%;text-align:center;color:#fff;padding:1rem 1.25rem;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%, rgba(0,0,0,.55) 100%);
+      font-size:clamp(.95rem,.9rem + .2vw,1.05rem)}
+
+    /* Even columns on desktop */
+    @media (min-width:900px){
+      main{grid-template-columns:1fr 1fr;align-items:stretch}
+      main section{height:100%}
+      #about{grid-column:1} #address{grid-column:2} #gallery{grid-column:1} #online{grid-column:2}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="assets/images/chapel.png" alt="Chapel Interior" class="hero-image" />
+    <div class="overlay">
+      <img src="assets/images/logo.png" alt="Cornerstone Logo" class="logo" />
+      <h1>Cornerstone Baptist Church</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#address">Visit</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#online">Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Cornerstone Baptist Church is a Christ-centered, Bible-believing community led by <strong>Pastor Dave Turner</strong>. We welcome you to join us in worship, teaching, and fellowship.</p>
+    </section>
+
+    <section id="address">
+      <h2>Visit Us</h2>
+      <p><strong>📍 Address:</strong><br>13455 Alexandria Pike Butler, KY 41006</p>
+
+      <p><strong>🕒 Sunday Services:</strong><br>
+        Sunday School – 10:00 AM<br>
+        Sunday Worship – 11:00 AM<br>
+        Afternoon Worship – 2:00 PM</p>
+
+      <p><strong>🕒 Wednesday Services:</strong><br>
+        Bible Study – 6:30–7:30 PM</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+
+      <!-- Simple static image so the page always works -->
+      <div class="gallery">
+        <img src="assets/images/logo2.png" alt="Service Flyer" />
+      </div>
+
+      <!-- VBS 2025 Carousel (safe even if empty) -->
+      <h3 class="subheading">VBS 2025</h3>
+      <div class="carousel-container" id="vbs-carousel">
+        <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+        <div class="carousel-track"></div>
+        <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+      </div>
+    </section>
+
+    <section id="online">
+      <h2>Join Us Online</h2>
+      <p>🧑‍💻 <a href="https://zoom.us/j/your-zoom-id" target="_blank" rel="noopener">Zoom Sunday Service</a></p>
+      <p>📺 <a href="https://www.youtube.com/@yourchannel" target="_blank" rel="noopener">Cornerstone on YouTube</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-overlay">
+      <p>&copy; 2025 Cornerstone Baptist Church | Serving Christ in Word and Fellowship</p>
+    </div>
+  </footer>
+
+  <script>
+    console.log("Website loaded successfully.");
+
+    /* ========== VBS 2025 Carousel Builder ==========
+       1) Put your media in: assets/images/VBS2025/
+       2) List filenames below in vbsFiles (images: jpg/png/webp/gif; videos: mp4/webm)
+       3) That's it — the slides will be created automatically. */
+
+    const VBS_BASE = 'assets/images/VBS2025/';
+
+    // Add your filenames here when ready (e.g., 'photo1.jpg', 'clip1.mp4')
+    const vbsFiles = [
+      // '20250624_184154.jpg',
+      // '20250624_200214.mp4',
+      // 'group_photo.png',
+    ];
+
+    (function initVBS(){
+      const container = document.getElementById('vbs-carousel');
+      const track = container.querySelector('.carousel-track');
+      const prevBtn = container.querySelector('.prev');
+      const nextBtn = container.querySelector('.next');
+
+      // Build slides or show placeholder
+      const addPlaceholder = () => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = '<img alt="Add VBS 2025 media" src="assets/images/logo2.png">';
+        track.appendChild(slide);
+      };
+
+      if (!Array.isArray(vbsFiles) || vbsFiles.length === 0) {
+        addPlaceholder();
+      } else {
+        vbsFiles.forEach(name => {
+          const lower = String(name).toLowerCase();
+          const slide = document.createElement('div');
+          slide.className = 'carousel-slide';
+
+          if (/\.(png|jpe?g|webp|gif)$/.test(lower)) {
+            const img = document.createElement('img');
+            img.src = VBS_BASE + name;
+            img.alt = 'VBS 2025';
+            slide.appendChild(img);
+          } else if (/\.(mp4|webm)$/.test(lower)) {
+            const vid = document.createElement('video');
+            vid.src = VBS_BASE + name;
+            vid.controls = true;
+            vid.playsInline = true;
+            slide.appendChild(vid);
+          } else {
+            // Unknown type: skip or show as placeholder
+            const note = document.createElement('div');
+            note.style.color = '#fff';
+            note.style.padding = '2rem';
+            note.textContent = 'Unsupported file: ' + name;
+            slide.appendChild(note);
+          }
+
+          track.appendChild(slide);
+        });
+      }
+
+      // Basic carousel controls (only if more than 1 slide)
+      const slides = Array.from(track.children);
+      let index = 0;
+
+      const update = () => {
+        const offset = -index * container.clientWidth;
+        track.style.transform = `translateX(${offset}px)`;
+      };
+
+      const clampIndex = () => {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+      };
+
+      const hasMultiple = slides.length > 1;
+      prevBtn.disabled = !hasMultiple;
+      nextBtn.disabled = !hasMultiple;
+
+      prevBtn.addEventListener('click', () => {
+        if (!hasMultiple) return;
+        index--; clampIndex(); update();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (!hasMultiple) return;
+        index++; clampIndex(); update();
+      });
+
+      // Keep slide aligned on resize
+      window.addEventListener('resize', update, { passive: true });
+      update();
+    })();
+  </script>
+</body>
+</html>

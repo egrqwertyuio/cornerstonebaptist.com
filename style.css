@@ -1,0 +1,250 @@
+/* ===== Font (KJV-style serif) ===== */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap');
+
+:root{
+  --bg: #ffffff;           /* keep white background */
+  --text: #122031;
+  --brand: #00558c;        /* deep blue */
+  --accent: #f2b428;       /* gold */
+  --line: #e9eef4;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Global reset & typography */
+*{ box-sizing: border-box }
+html{ scroll-behavior: smooth }
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "EB Garamond", Garamond, "Times New Roman", Times, serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img{ max-width:100%; display:block }
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+  background:#000;
+}
+.hero-image{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  padding: clamp(1rem, 1.5vw + 1rem, 3rem);
+  text-align:center;
+  color:#fff;
+  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 50%, rgba(0,0,0,.55) 100%);
+  backdrop-filter: saturate(120%) blur(1px);
+}
+.logo{
+  width: clamp(80px, 10vw, 120px);
+  height:auto;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.3));
+}
+.overlay h1{
+  margin:.25rem 0 0 0;
+  font-weight:700;
+  letter-spacing:.2px;
+  font-size: clamp(1.35rem, 1.1rem + 1.5vw, 2.35rem);
+  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+}
+
+/* ===== Nav ===== */
+nav{
+  margin-top:.5rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem .75rem;
+  justify-content:center;
+}
+nav a{
+  color:#0b1a28;
+  background:#fff;
+  border:1px solid rgba(255,255,255,.6);
+  text-decoration:none;
+  font-weight:700;
+  padding:.5rem .85rem;
+  border-radius:999px;
+  transition:.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+nav a:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* ===== Main layout ===== */
+main{
+  width:min(100%, 1200px);
+  margin:auto;
+  padding: clamp(1rem, 1.5vw + 1rem, 2.5rem);
+  display:grid;
+  grid-template-columns: 1fr;       /* default mobile */
+  gap: clamp(1rem, 1.2vw, 1.5rem);
+}
+
+/* ===== Cards ===== */
+section{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: 18px;
+  padding: clamp(1rem, 1.2rem + .6vw, 1.75rem);
+  box-shadow: var(--shadow);
+}
+h2{
+  margin:0 0 .8rem 0;
+  color:var(--brand);
+  font-weight:700;
+  font-size: clamp(1.1rem, 1rem + .9vw, 1.6rem);
+  position:relative;
+  padding-bottom:.25rem;
+}
+h2::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:-6px;
+  height:3px; width:64px;
+  background: linear-gradient(90deg, var(--accent), #ffd86b);
+  border-radius:4px;
+}
+section p, section li{
+  font-size: clamp(1rem, .95rem + .25vw, 1.15rem);
+}
+
+/* ===== Gallery ===== */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: clamp(.75rem, 1vw, 1.25rem);
+  margin-top:.75rem;
+}
+.gallery img{
+  width:100%;
+  aspect-ratio: 4 / 3;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid #e6edf3;
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.gallery img:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+  filter: saturate(110%);
+}
+
+/* ===== Links ===== */
+a{
+  color:var(--brand);
+  text-decoration:none;
+  border-bottom:2px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+a:hover{ border-bottom-color: var(--accent) }
+
+/* ===== Footer ===== */
+footer{
+  position:relative;
+  min-height: 260px;
+  background: url('assets/images/parking.png') center/cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  margin-top: clamp(1rem, 1.5vw, 2rem);
+  border-top: 1px solid var(--line);
+  box-shadow: inset 0 80px 120px rgba(0,0,0,.25);
+}
+.footer-overlay{
+  width:100%;
+  text-align:center;
+  color:#fff;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.55) 100%);
+  font-size: clamp(.95rem, .9rem + .2vw, 1.05rem);
+}
+
+/* ===== Even-height columns on desktop ===== */
+@media (min-width: 900px){
+  main{
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch; /* match heights in each row */
+  }
+  main section{
+    height: 100%; /* fill row height */
+  }
+}
+/* Subheading for VBS 2025 */
+.subheading {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--brand);
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* Carousel Styling */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }

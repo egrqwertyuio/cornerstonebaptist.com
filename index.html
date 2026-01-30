@@ -3,235 +3,351 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cornerstone Baptist Church</title>
+  <meta name="description" content="Cornerstone Baptist Church - A Christ-centered, Bible-believing community in Butler, KY led by Pastor Dave Turner">
+  <title>Cornerstone Baptist Church - Butler, KY</title>
 
-  <!-- KJV-style font -->
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet"/>
-
-  <style>
-    :root{
-      --bg:#ffffff; --text:#122031; --brand:#00558c; --accent:#f2b428; --line:#e9eef4;
-      --shadow:0 10px 30px rgba(0,0,0,.08);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:"EB Garamond", Garamond, "Times New Roman", Times, serif;line-height:1.65}
-    img,video{max-width:100%;display:block}
-
-    /* Hero */
-    .hero{position:relative;width:100%;overflow:hidden;box-shadow:var(--shadow);background:#000}
-    .hero-image{width:100%;height:auto;display:block}
-    .overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;
-      padding:clamp(1rem,1.5vw + 1rem,3rem);text-align:center;color:#fff;
-      background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.55) 100%)}
-    .logo{width:clamp(80px,10vw,120px);height:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.3))}
-    .overlay h1{margin:.25rem 0 0;font-weight:700;letter-spacing:.2px;font-size:clamp(1.35rem,1.1rem + 1.5vw,2.35rem);text-shadow:0 2px 14px rgba(0,0,0,.35)}
-
-    /* Nav */
-    nav{margin-top:.5rem;display:flex;flex-wrap:wrap;gap:.5rem .75rem;justify-content:center}
-    nav a{color:#0b1a28;background:#fff;border:1px solid rgba(255,255,255,.6);text-decoration:none;font-weight:700;
-      padding:.5rem .85rem;border-radius:999px;transition:.2s ease;box-shadow:0 6px 16px rgba(0,0,0,.08)}
-    nav a:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
-
-    /* Main & Cards */
-    main{width:min(100%,1200px);margin:auto;padding:clamp(1rem,1.5vw + 1rem,2.5rem);display:grid;grid-template-columns:1fr;gap:clamp(1rem,1.2vw,1.5rem)}
-    section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(1rem,1.2rem + .6vw,1.75rem);box-shadow:var(--shadow)}
-    h2{margin:0 0 .8rem;color:var(--brand);font-weight:700;font-size:clamp(1.1rem,1rem + .9vw,1.6rem);position:relative;padding-bottom:.25rem}
-    h2::after{content:"";position:absolute;left:0;bottom:-6px;height:3px;width:64px;background:linear-gradient(90deg,var(--accent),#ffd86b);border-radius:4px}
-    section p, section li{font-size:clamp(1rem,.95rem + .25vw,1.15rem)}
-
-    /* Gallery grid (existing items) */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(.75rem,1vw,1.25rem);margin-top:.75rem}
-    .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid #e6edf3;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s, filter .25s}
-    .gallery img:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.12);filter:saturate(110%)}
-
-    /* VBS 2025 subheading */
-    .subheading{margin-top:1.5rem;font-size:1.25rem;color:var(--brand);border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:.25rem}
-
-    /* Carousel */
-    .carousel-container{position:relative;overflow:hidden;margin-top:1rem;border-radius:12px;box-shadow:var(--shadow)}
-    .carousel-track{display:flex;transition:transform .4s ease-in-out;touch-action:pan-y}
-    .carousel-slide{min-width:100%;box-sizing:border-box;background:#000}
-    .carousel-slide img,.carousel-slide video{width:100%;height:auto;display:block;border-radius:12px}
-    .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:#fff;border:none;font-size:2rem;
-      padding:.5rem .75rem;cursor:pointer;z-index:5;border-radius:50%;transition:background .3s}
-    .carousel-btn:hover{background:rgba(0,0,0,.6)}
-    .carousel-btn.prev{left:10px}.carousel-btn.next{right:10px}
-
-    /* Footer (parking image) */
-    footer{position:relative;min-height:260px;background:url('assets/images/parking.png') center/cover no-repeat;display:flex;align-items:flex-end;justify-content:center;
-      margin-top:clamp(1rem,1.5vw,2rem);border-top:1px solid var(--line);box-shadow:inset 0 80px 120px rgba(0,0,0,.25)}
-    .footer-overlay{width:100%;text-align:center;color:#fff;padding:1rem 1.25rem;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%, rgba(0,0,0,.55) 100%);
-      font-size:clamp(.95rem,.9rem + .2vw,1.05rem)}
-
-    /* Even columns on desktop */
-    @media (min-width:900px){
-      main{grid-template-columns:1fr 1fr;align-items:stretch}
-      main section{height:100%}
-      #about{grid-column:1} #address{grid-column:2} #gallery{grid-column:1} #online{grid-column:2}
-    }
-  </style>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero">
-    <img src="assets/images/chapel.png" alt="Chapel Interior" class="hero-image" />
-    <div class="overlay">
-      <img src="assets/images/logo.png" alt="Cornerstone Logo" class="logo" />
-      <h1>Cornerstone Baptist Church</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#address">Visit</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#online">Online</a>
-      </nav>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="Cornerstone Logo" class="nav-logo" />
+        <span class="nav-title">Cornerstone Baptist Church</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#online" class="nav-link nav-cta">Join Online</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Cornerstone Baptist Church is a Christ-centered, Bible-believing community led by <strong>Pastor Dave Turner</strong>. We welcome you to join us in worship, teaching, and fellowship.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <img src="assets/images/chapel.png" alt="Chapel Interior" class="hero-image" />
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/images/logo.png" alt="Cornerstone Logo" class="hero-logo" data-aos="zoom-in" data-aos-delay="200" />
+        <h1 data-aos="fade-up" data-aos-delay="400">Cornerstone Baptist Church</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">Building Lives on Christ, the Solid Rock</p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+          <a href="#services" class="btn btn-primary">Service Times</a>
+          <a href="#contact" class="btn btn-secondary">Visit Us</a>
+        </div>
+      </div>
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
 
-    <section id="address">
-      <h2>Visit Us</h2>
-      <p><strong>📍 Address:</strong><br>13455 Alexandria Pike Butler, KY 41006</p>
+  <!-- Welcome Banner -->
+  <section class="welcome-banner">
+    <div class="container">
+      <div class="welcome-content" data-aos="fade-up">
+        <i class="fas fa-bible welcome-icon"></i>
+        <h2>Welcome to Our Church Family</h2>
+        <p>A Christ-centered, Bible-believing community where faith grows and lives are transformed</p>
+      </div>
+    </div>
+  </section>
 
-      <p><strong>🕒 Sunday Services:</strong><br>
-        Sunday School – 10:00 AM<br>
-        Sunday Worship – 11:00 AM<br>
-        Afternoon Worship – 2:00 PM</p>
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Who We Are</span>
+        <h2 class="section-title">About Cornerstone Baptist Church</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-icon">
+            <i class="fas fa-cross"></i>
+          </div>
+          <h3>Our Faith</h3>
+          <p>We are a Christ-centered community committed to the authority and truth of God's Word. Our foundation is built on biblical principles and the transforming power of the Gospel.</p>
+        </div>
+        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-icon">
+            <i class="fas fa-hands-praying"></i>
+          </div>
+          <h3>Our Pastor</h3>
+          <p>Led by <strong>Pastor Dave Turner</strong>, our church is guided by faithful biblical teaching and a heart for shepherding God's people in truth and love.</p>
+        </div>
+        <div class="about-card" data-aos="fade-left" data-aos-delay="300">
+          <div class="about-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Our Community</h3>
+          <p>We are a welcoming family of believers dedicated to worship, fellowship, and serving one another as we grow together in Christ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p><strong>🕒 Wednesday Services:</strong><br>
-        Bible Study – 6:30–7:30 PM</p>
-    </section>
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header light" data-aos="fade-up">
+        <span class="section-subtitle">Join Us</span>
+        <h2 class="section-title">Service Times</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+          <div class="service-day">
+            <i class="fas fa-calendar-day"></i>
+            <h3>Sunday</h3>
+          </div>
+          <div class="service-times">
+            <div class="service-time">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Sunday School</h4>
+                <p>10:00 AM</p>
+              </div>
+            </div>
+            <div class="service-time">
+              <i class="fas fa-church"></i>
+              <div>
+                <h4>Morning Worship</h4>
+                <p>11:00 AM</p>
+              </div>
+            </div>
+            <div class="service-time">
+              <i class="fas fa-praying-hands"></i>
+              <div>
+                <h4>Afternoon Worship</h4>
+                <p>2:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+          <div class="service-day">
+            <i class="fas fa-calendar-week"></i>
+            <h3>Wednesday</h3>
+          </div>
+          <div class="service-times">
+            <div class="service-time">
+              <i class="fas fa-book-open"></i>
+              <div>
+                <h4>Bible Study</h4>
+                <p>6:30 - 7:30 PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-note">
+            <i class="fas fa-info-circle"></i>
+            <p>All ages welcome - Growing together in God's Word</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="gallery">
-      <h2>Gallery</h2>
-
-      <!-- Simple static image so the page always works -->
-      <div class="gallery">
-        <img src="assets/images/logo2.png" alt="Service Flyer" />
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Memories</span>
+        <h2 class="section-title">Church Gallery</h2>
+        <div class="title-underline"></div>
       </div>
 
-      <!-- VBS 2025 Carousel (safe even if empty) -->
-      <h3 class="subheading">VBS 2025</h3>
-      <div class="carousel-container" id="vbs-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
-        <div class="carousel-track"></div>
-        <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+      <!-- Featured Image -->
+      <div class="gallery-featured" data-aos="zoom-in">
+        <img src="assets/images/logo2.png" alt="Church Service" class="featured-image" />
       </div>
-    </section>
 
-    <section id="online">
-      <h2>Join Us Online</h2>
-      <p>🧑‍💻 <a href="https://zoom.us/j/your-zoom-id" target="_blank" rel="noopener">Zoom Sunday Service</a></p>
-      <p>📺 <a href="https://www.youtube.com/@yourchannel" target="_blank" rel="noopener">Cornerstone on YouTube</a></p>
-    </section>
-  </main>
+      <!-- VBS 2025 Section -->
+      <div class="vbs-section">
+        <h3 class="vbs-title" data-aos="fade-up">
+          <i class="fas fa-children"></i>
+          Vacation Bible School 2025
+        </h3>
+        <div class="carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+          <div class="carousel-container" id="vbs-carousel">
+            <button class="carousel-btn prev" aria-label="Previous slide">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-track" id="carouselTrack"></div>
+            <button class="carousel-btn next" aria-label="Next slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="footer-overlay">
-      <p>&copy; 2025 Cornerstone Baptist Church | Serving Christ in Word and Fellowship</p>
+  <!-- Online Section -->
+  <section class="online-section" id="online">
+    <div class="container">
+      <div class="section-header light" data-aos="fade-up">
+        <span class="section-subtitle">Can't Make It In Person?</span>
+        <h2 class="section-title">Join Us Online</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="online-grid">
+        <div class="online-card" data-aos="fade-right" data-aos-delay="100">
+          <div class="online-icon zoom">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>Zoom Sunday Service</h3>
+          <p>Join our live Sunday morning worship service from anywhere in the world</p>
+          <a href="https://zoom.us/j/your-zoom-id" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-video"></i> Join on Zoom
+          </a>
+        </div>
+        <div class="online-card" data-aos="fade-left" data-aos-delay="200">
+          <div class="online-icon youtube">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <h3>YouTube Channel</h3>
+          <p>Watch past sermons and stay connected with our church community</p>
+          <a href="https://www.youtube.com/@yourchannel" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fab fa-youtube"></i> Visit Channel
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Get in Touch</span>
+        <h2 class="section-title">Visit Us</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Address</h3>
+              <p>13455 Alexandria Pike<br>Butler, KY 41006</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <p>Call us for more information</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p>Get in touch with our staff</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map" data-aos="fade-left">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.5!2d-84.37!3d38.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU4JzEzLjIiTiA4NMKwMjInMTIuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%" 
+            height="400" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-overlay"></div>
+    <img src="assets/images/parking.png" alt="Church Parking" class="footer-bg" />
+    <div class="footer-content">
+      <div class="container">
+        <div class="footer-grid" data-aos="fade-up">
+          <div class="footer-col">
+            <img src="assets/images/logo.png" alt="Cornerstone Logo" class="footer-logo" />
+            <h3>Cornerstone Baptist Church</h3>
+            <p>Building Lives on the Solid Rock of Christ</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Service Times</h4>
+            <ul class="footer-info">
+              <li><i class="fas fa-clock"></i> Sunday School: 10:00 AM</li>
+              <li><i class="fas fa-clock"></i> Sunday Worship: 11:00 AM</li>
+              <li><i class="fas fa-clock"></i> Afternoon: 2:00 PM</li>
+              <li><i class="fas fa-clock"></i> Wednesday: 6:30 PM</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-contact">
+              <p><i class="fas fa-map-marker-alt"></i> Butler, KY 41006</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Cornerstone Baptist Church | Serving Christ in Word and Fellowship</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script>
-    console.log("Website loaded successfully.");
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    /* ========== VBS 2025 Carousel Builder ==========
-       1) Put your media in: assets/images/VBS2025/
-       2) List filenames below in vbsFiles (images: jpg/png/webp/gif; videos: mp4/webm)
-       3) That's it — the slides will be created automatically. */
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
 
-    const VBS_BASE = 'assets/images/VBS2025/';
-
-    // Add your filenames here when ready (e.g., 'photo1.jpg', 'clip1.mp4')
-    const vbsFiles = [
-      // '20250624_184154.jpg',
-      // '20250624_200214.mp4',
-      // 'group_photo.png',
-    ];
-
-    (function initVBS(){
-      const container = document.getElementById('vbs-carousel');
-      const track = container.querySelector('.carousel-track');
-      const prevBtn = container.querySelector('.prev');
-      const nextBtn = container.querySelector('.next');
-
-      // Build slides or show placeholder
-      const addPlaceholder = () => {
-        const slide = document.createElement('div');
-        slide.className = 'carousel-slide';
-        slide.innerHTML = '<img alt="Add VBS 2025 media" src="assets/images/logo2.png">';
-        track.appendChild(slide);
-      };
-
-      if (!Array.isArray(vbsFiles) || vbsFiles.length === 0) {
-        addPlaceholder();
-      } else {
-        vbsFiles.forEach(name => {
-          const lower = String(name).toLowerCase();
-          const slide = document.createElement('div');
-          slide.className = 'carousel-slide';
-
-          if (/\.(png|jpe?g|webp|gif)$/.test(lower)) {
-            const img = document.createElement('img');
-            img.src = VBS_BASE + name;
-            img.alt = 'VBS 2025';
-            slide.appendChild(img);
-          } else if (/\.(mp4|webm)$/.test(lower)) {
-            const vid = document.createElement('video');
-            vid.src = VBS_BASE + name;
-            vid.controls = true;
-            vid.playsInline = true;
-            slide.appendChild(vid);
-          } else {
-            // Unknown type: skip or show as placeholder
-            const note = document.createElement('div');
-            note.style.color = '#fff';
-            note.style.padding = '2rem';
-            note.textContent = 'Unsupported file: ' + name;
-            slide.appendChild(note);
-          }
-
-          track.appendChild(slide);
-        });
-      }
-
-      // Basic carousel controls (only if more than 1 slide)
-      const slides = Array.from(track.children);
-      let index = 0;
-
-      const update = () => {
-        const offset = -index * container.clientWidth;
-        track.style.transform = `translateX(${offset}px)`;
-      };
-
-      const clampIndex = () => {
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
-      };
-
-      const hasMultiple = slides.length > 1;
-      prevBtn.disabled = !hasMultiple;
-      nextBtn.disabled = !hasMultiple;
-
-      prevBtn.addEventListener('click', () => {
-        if (!hasMultiple) return;
-        index--; clampIndex(); update();
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if (!hasMultiple) return;
-        index++; clampIndex(); update();
-      });
-
-      // Keep slide aligned on resize
-      window.addEventListener('resize', update, { passive: true });
-      update();
-    })();
-  </script>
 </body>
 </html>

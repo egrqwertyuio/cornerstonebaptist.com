@@ -8,13 +8,13 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  
+
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,11 +32,12 @@
         <span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+        <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
         <li><a href="#online" class="nav-link nav-cta">Join Online</a></li>
       </ul>
     </div>
@@ -53,7 +54,7 @@
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">Building Lives on Christ, the Solid Rock</p>
         <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
           <a href="#services" class="btn btn-primary">Service Times</a>
-          <a href="#contact" class="btn btn-secondary">Visit Us</a>
+          <a href="contact.html" class="btn btn-secondary">Visit Us</a>
         </div>
       </div>
       <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
@@ -73,41 +74,31 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section" id="about">
+  <!-- Pastor's Welcome Section -->
+  <section class="pastor-welcome-section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-subtitle">Who We Are</span>
-        <h2 class="section-title">About Cornerstone Baptist Church</h2>
-        <div class="title-underline"></div>
-      </div>
-      <div class="about-grid">
-        <div class="about-card" data-aos="fade-right" data-aos-delay="100">
-          <div class="about-icon">
-            <i class="fas fa-cross"></i>
+      <div class="pastor-welcome-grid">
+        <div class="pastor-image-container" data-aos="fade-right">
+          <div class="pastor-image-frame">
+            <img src="assets/images/logo2.png" alt="Pastor Dave Turner" class="pastor-image" />
           </div>
-          <h3>Our Faith</h3>
-          <p>We are a Christ-centered community committed to the authority and truth of God's Word. Our foundation is built on biblical principles and the transforming power of the Gospel.</p>
         </div>
-        <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="about-icon">
-            <i class="fas fa-hands-praying"></i>
+        <div class="pastor-welcome-text" data-aos="fade-left">
+          <span class="section-subtitle">From Our Pastor</span>
+          <h2 class="section-title">A Message from Pastor Dave Turner</h2>
+          <div class="title-underline"></div>
+          <div class="pastor-message">
+            <p>Welcome to Cornerstone Baptist Church! We are so glad you're here. Whether you're seeking a church home or just exploring, we invite you to experience the love of Christ in our community.</p>
+            <p>Our church is built on the solid foundation of God's Word, and we are committed to faithful biblical teaching, genuine fellowship, and loving service to one another and our community.</p>
+            <p>We would love to meet you in person. Come join us this Sunday!</p>
           </div>
-          <h3>Our Pastor</h3>
-          <p>Led by <strong>Pastor Dave Turner</strong>, our church is guided by faithful biblical teaching and a heart for shepherding God's people in truth and love.</p>
-        </div>
-        <div class="about-card" data-aos="fade-left" data-aos-delay="300">
-          <div class="about-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3>Our Community</h3>
-          <p>We are a welcoming family of believers dedicated to worship, fellowship, and serving one another as we grow together in Christ.</p>
+          <a href="about.html" class="btn btn-primary">Learn More About Us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Service Times Section -->
   <section class="services-section" id="services">
     <div class="container">
       <div class="section-header light" data-aos="fade-up">
@@ -168,38 +159,47 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery-section" id="gallery">
+  <!-- Quick Links Section -->
+  <section class="quick-links-section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-subtitle">Memories</span>
-        <h2 class="section-title">Church Gallery</h2>
+        <span class="section-subtitle">Explore</span>
+        <h2 class="section-title">Discover Our Church</h2>
         <div class="title-underline"></div>
       </div>
-
-      <!-- Featured Image -->
-      <div class="gallery-featured" data-aos="zoom-in">
-        <img src="assets/images/logo2.png" alt="Church Service" class="featured-image" />
-      </div>
-
-      <!-- VBS 2025 Section -->
-      <div class="vbs-section">
-        <h3 class="vbs-title" data-aos="fade-up">
-          <i class="fas fa-children"></i>
-          Vacation Bible School 2025
-        </h3>
-        <div class="carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
-          <div class="carousel-container" id="vbs-carousel">
-            <button class="carousel-btn prev" aria-label="Previous slide">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="carousel-track" id="carouselTrack"></div>
-            <button class="carousel-btn next" aria-label="Next slide">
-              <i class="fas fa-chevron-right"></i>
-            </button>
+      <div class="quick-links-grid">
+        <a href="about.html" class="quick-link-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="quick-link-icon">
+            <i class="fas fa-church"></i>
           </div>
-          <div class="carousel-dots" id="carouselDots"></div>
-        </div>
+          <h3>About Us</h3>
+          <p>Learn about our mission, beliefs, and leadership</p>
+          <span class="quick-link-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="ministries.html" class="quick-link-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="quick-link-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Ministries</h3>
+          <p>Discover our youth, children's, and outreach programs</p>
+          <span class="quick-link-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="sermons.html" class="quick-link-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="quick-link-icon">
+            <i class="fas fa-bible"></i>
+          </div>
+          <h3>Sermons</h3>
+          <p>Watch recent messages and Bible teachings</p>
+          <span class="quick-link-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="events.html" class="quick-link-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="quick-link-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Events</h3>
+          <p>View upcoming events and photo galleries</p>
+          <span class="quick-link-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
       </div>
     </div>
   </section>
@@ -237,54 +237,15 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
+  <!-- Call to Action Section -->
+  <section class="cta-section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-subtitle">Get in Touch</span>
-        <h2 class="section-title">Visit Us</h2>
-        <div class="title-underline"></div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info" data-aos="fade-right">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Address</h3>
-              <p>13455 Alexandria Pike<br>Butler, KY 41006</p>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Phone</h3>
-              <p>Call us for more information</p>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <p>Get in touch with our staff</p>
-            </div>
-          </div>
-        </div>
-        <div class="contact-map" data-aos="fade-left">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.5!2d-84.37!3d38.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU4JzEzLjIiTiA4NMKwMjInMTIuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
-            width="100%" 
-            height="400" 
-            style="border:0; border-radius: 12px;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+      <div class="cta-content" data-aos="zoom-in">
+        <h2>Planning to Visit?</h2>
+        <p>We'd love to have you join us! Come as you are and experience the warmth of our fellowship.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Get Directions</a>
+          <a href="contact.html#contact-form" class="btn btn-secondary">Contact Us</a>
         </div>
       </div>
     </div>
@@ -305,11 +266,12 @@
           <div class="footer-col">
             <h4>Quick Links</h4>
             <ul class="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="ministries.html">Ministries</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -329,7 +291,7 @@
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="footer-contact">
-              <p><i class="fas fa-map-marker-alt"></i> Butler, KY 41006</p>
+              <p><i class="fas fa-map-marker-alt"></i> 13455 Alexandria Pike<br>Butler, KY 41006</p>
             </div>
           </div>
         </div>

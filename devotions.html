@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Daily devotions and scripture readings from Cornerstone Baptist Church - King James Bible">
+  <title>Daily Devotions - Cornerstone Baptist Church</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="Cornerstone Logo" class="nav-logo" />
+        <span class="nav-title">Cornerstone Baptist Church</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+        <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="index.html#online" class="nav-link nav-cta">Join Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <div class="page-header-content" data-aos="fade-up">
+        <h1>Daily Devotions</h1>
+        <p>Start Each Day with God's Word</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Devotions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Today's Verse Section -->
+  <section class="todays-verse-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Daily Bread</span>
+        <h2 class="section-title">Verse of the Day</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="verse-card-main" data-aos="zoom-in" data-aos-delay="200" id="dailyVerse">
+        <div class="verse-icon">
+          <i class="fas fa-book-bible"></i>
+        </div>
+        <blockquote class="verse-text" id="verseText">
+          Loading today's verse...
+        </blockquote>
+        <cite class="verse-reference" id="verseRef">King James Bible</cite>
+        <button class="share-verse-btn" id="shareVerse">
+          <i class="fas fa-share-alt"></i> Share This Verse
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripture References Section -->
+  <section class="scripture-refs-section">
+    <div class="container">
+      <div class="section-header light" data-aos="fade-up">
+        <span class="section-subtitle">Topical Study</span>
+        <h2 class="section-title">Scripture References by Topic</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="refs-grid">
+        <!-- Salvation -->
+        <div class="ref-topic-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="ref-icon">
+            <i class="fas fa-cross"></i>
+          </div>
+          <h3>Salvation</h3>
+          <div class="ref-list">
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Romans 10:9">Romans 10:9</span>
+              <p>"That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="1 John 5:13">1 John 5:13</span>
+              <p>"These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life..."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="John 3:16">John 3:16</span>
+              <p>"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Ephesians 2:8-9">Ephesians 2:8-9</span>
+              <p>"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Heaven -->
+        <div class="ref-topic-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ref-icon">
+            <i class="fas fa-dove"></i>
+          </div>
+          <h3>Heaven</h3>
+          <div class="ref-list">
+            <div class="ref-item">
+              <span class="ref-link" data-verse="John 14:2-3">John 14:2-3</span>
+              <p>"In my Father's house are many mansions... I go to prepare a place for you."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Revelation 21:4">Revelation 21:4</span>
+              <p>"And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying..."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="1 Corinthians 2:9">1 Corinthians 2:9</span>
+              <p>"Eye hath not seen, nor ear heard, neither have entered into the heart of man, the things which God hath prepared for them that love him."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hell -->
+        <div class="ref-topic-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="ref-icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h3>Hell</h3>
+          <div class="ref-list">
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Revelation 20:15">Revelation 20:15</span>
+              <p>"And whosoever was not found written in the book of life was cast into the lake of fire."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Matthew 25:41">Matthew 25:41</span>
+              <p>"Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire..."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Mark 9:43-44">Mark 9:43-44</span>
+              <p>"And if thy hand offend thee, cut it off: it is better for thee to enter into life maimed, than... to go into hell, into the fire that never shall be quenched."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- God's Love -->
+        <div class="ref-topic-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="ref-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>God's Love</h3>
+          <div class="ref-list">
+            <div class="ref-item">
+              <span class="ref-link" data-verse="1 John 4:8">1 John 4:8</span>
+              <p>"He that loveth not knoweth not God; for God is love."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Romans 5:8">Romans 5:8</span>
+              <p>"But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Jeremiah 31:3">Jeremiah 31:3</span>
+              <p>"Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faith -->
+        <div class="ref-topic-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ref-icon">
+            <i class="fas fa-hands-praying"></i>
+          </div>
+          <h3>Faith</h3>
+          <div class="ref-list">
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Hebrews 11:1">Hebrews 11:1</span>
+              <p>"Now faith is the substance of things hoped for, the evidence of things not seen."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Hebrews 11:6">Hebrews 11:6</span>
+              <p>"But without faith it is impossible to please him: for he that cometh to God must believe that he is..."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Romans 10:17">Romans 10:17</span>
+              <p>"So then faith cometh by hearing, and hearing by the word of God."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hope -->
+        <div class="ref-topic-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="ref-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Hope</h3>
+          <div class="ref-list">
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Romans 15:13">Romans 15:13</span>
+              <p>"Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope..."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Jeremiah 29:11">Jeremiah 29:11</span>
+              <p>"For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end."</p>
+            </div>
+            <div class="ref-item">
+              <span class="ref-link" data-verse="Psalm 42:11">Psalm 42:11</span>
+              <p>"Hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reading Plans Section -->
+  <section class="reading-plans-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Study Plans</span>
+        <h2 class="section-title">Bible Reading Plans</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card" data-aos="fade-right" data-aos-delay="100">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Read the Bible in a Year</h3>
+          <p>A structured plan to read through the entire King James Bible in 365 days.</p>
+          <a href="https://www.blueletterbible.org/study/intros/plan_chronological.cfm" target="_blank" rel="noopener" class="btn btn-primary">Start Reading</a>
+        </div>
+        <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-book"></i>
+          <h3>New Testament in 90 Days</h3>
+          <p>Focus on the life and teachings of Jesus Christ and the early church.</p>
+          <a href="https://www.bible.com/reading-plans" target="_blank" rel="noopener" class="btn btn-primary">Start Reading</a>
+        </div>
+        <div class="plan-card" data-aos="fade-left" data-aos-delay="300">
+          <i class="fas fa-book-bible"></i>
+          <h3>Psalms & Proverbs</h3>
+          <p>Read one Psalm and one chapter of Proverbs each day for wisdom and worship.</p>
+          <a href="https://www.kingjamesbibleonline.org/Psalms_1/" target="_blank" rel="noopener" class="btn btn-primary">Start Reading</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KJV Resources -->
+  <section class="kjv-resources-section">
+    <div class="container">
+      <div class="kjv-content" data-aos="zoom-in">
+        <div class="kjv-icon">
+          <i class="fas fa-bible"></i>
+        </div>
+        <h2>Read the King James Bible Online</h2>
+        <p>Access the complete King James Bible online for your daily study and devotions.</p>
+        <div class="kjv-buttons">
+          <a href="https://www.kingjamesbibleonline.org/" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-book-open"></i> Read Online
+          </a>
+          <a href="https://www.kingjamesbibleonline.org/Bible-Books/" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fas fa-list"></i> Browse Books
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-overlay"></div>
+    <img src="assets/images/parking.png" alt="Church Parking" class="footer-bg" />
+    <div class="footer-content">
+      <div class="container">
+        <div class="footer-grid" data-aos="fade-up">
+          <div class="footer-col">
+            <img src="assets/images/logo.png" alt="Cornerstone Logo" class="footer-logo" />
+            <h3>Cornerstone Baptist Church</h3>
+            <p>Building Lives on the Solid Rock of Christ</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="ministries.html">Ministries</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Service Times</h4>
+            <ul class="footer-info">
+              <li><i class="fas fa-clock"></i> Sunday School: 10:00 AM</li>
+              <li><i class="fas fa-clock"></i> Sunday Worship: 11:00 AM</li>
+              <li><i class="fas fa-clock"></i> Afternoon: 2:00 PM</li>
+              <li><i class="fas fa-clock"></i> Wednesday: 6:30 PM</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-contact">
+              <p><i class="fas fa-map-marker-alt"></i> 13455 Alexandria Pike<br>Butler, KY 41006</p>
+              <p><i class="fas fa-phone"></i> (859) 462-0300</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Cornerstone Baptist Church | Serving Christ in Word and Fellowship</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script src="devotions.js"></script>
+
+</body>
+</html>

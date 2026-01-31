@@ -258,8 +258,17 @@ button {
   transition: width var(--transition-normal);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
+}
+
+.nav-link.active {
+  color: var(--accent);
+}
+
+.navbar.scrolled .nav-link.active {
+  color: var(--accent);
 }
 
 .nav-link.nav-cta {
@@ -1373,64 +1382,108 @@ button {
     transition: right var(--transition-slow);
     box-shadow: var(--shadow-xl);
   }
-  
+
   .nav-menu.active {
     right: 0;
   }
-  
+
   .nav-toggle {
     display: flex;
   }
-  
+
   .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(7px, 7px);
   }
-  
+
   .nav-toggle.active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
   }
-  
+
   .nav-link {
     color: var(--white);
     font-size: 1.1rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .about-grid,
   .services-grid,
-  .online-grid {
+  .online-grid,
+  .quick-links-grid,
+  .mission-pillars,
+  .beliefs-grid,
+  .ministry-features,
+  .sermons-grid,
+  .series-grid,
+  .watch-live-options,
+  .resources-grid,
+  .life-gallery-grid,
+  .contact-cards-grid,
+  .contact-times-grid,
+  .visitor-info-grid {
     grid-template-columns: 1fr;
   }
-  
-  .contact-grid {
+
+  .contact-grid,
+  .pastor-welcome-grid,
+  .pastor-bio-grid,
+  .history-content,
+  .why-visit-grid,
+  .ministry-detail-grid,
+  .map-form-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  
+
+  .ministry-detail-grid.reverse {
+    direction: ltr;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .carousel-btn {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
-  
+
   .carousel-btn.prev {
     left: 0.5rem;
   }
-  
+
   .carousel-btn.next {
     right: 0.5rem;
+  }
+
+  .event-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .event-date-badge {
+    margin: 0 auto;
+  }
+
+  .page-header {
+    padding: 6rem 0 3rem;
+  }
+
+  .cta-buttons,
+  .involved-buttons,
+  .event-cta-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

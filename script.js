@@ -393,6 +393,61 @@ window.addEventListener('load', () => {
   }, 500);
 });
 
+// ===== Active Navigation Link =====
+// Set active state based on current page
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const allNavLinks = document.querySelectorAll('.nav-link');
+
+  allNavLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    // Remove active class from all links first
+    link.classList.remove('active');
+
+    // Add active class to current page link
+    if (href === currentPage ||
+        (currentPage === '' && href === 'index.html') ||
+        (currentPage === '/' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ===== Contact Form Handling =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+
+    // Show success message (in production, this would submit to a server)
+    alert('Thank you for your message! We\'ll get back to you soon.\n\nNote: This is a demo. To make this functional, integrate with a backend service like Formspree or Netlify Forms.');
+
+    // Reset form
+    contactForm.reset();
+
+    // In production, you would send this to a server:
+    // Example with Formspree:
+    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(data)
+    // }).then(response => {
+    //   if (response.ok) {
+    //     alert('Thank you! We\'ll get back to you soon.');
+    //     contactForm.reset();
+    //   } else {
+    //     alert('Sorry, there was an error. Please try again.');
+    //   }
+    // }).catch(error => {
+    //   alert('Sorry, there was an error. Please try again later.');
+    // });
+  });
+}
+
 // ===== Console Welcome Message =====
 console.log('%c🏛️ Cornerstone Baptist Church', 'color: #00558c; font-size: 20px; font-weight: bold;');
 console.log('%cBuilding Lives on Christ, the Solid Rock', 'color: #f2b428; font-size: 14px;');

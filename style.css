@@ -3210,6 +3210,277 @@ button {
   flex-wrap: wrap;
 }
 
+/* ===== Devotions Page Styles ===== */
+
+/* Today's Verse Section */
+.todays-verse-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.verse-card-main {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.verse-card-main::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: movePattern 20s linear infinite;
+}
+
+.verse-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.verse-text {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.verse-reference {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  font-style: normal;
+}
+
+.share-verse-btn {
+  background: var(--accent);
+  color: var(--dark);
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+}
+
+.share-verse-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Scripture References Section */
+.scripture-refs-section {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+}
+
+.refs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.ref-topic-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all var(--transition-normal);
+}
+
+.ref-topic-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.ref-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+.ref-topic-card h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.ref-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ref-item {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent);
+  transition: var(--transition-fast);
+}
+
+.ref-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.ref-link {
+  display: inline-block;
+  color: var(--accent);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.ref-item p {
+  font-family: var(--font-secondary);
+  line-height: 1.7;
+  opacity: 0.95;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Reading Plans Section */
+.reading-plans-section {
+  padding: var(--section-padding) 0;
+  background: var(--light);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.plan-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
+}
+
+.plan-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.plan-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.plan-card p {
+  font-family: var(--font-secondary);
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* KJV Resources Section */
+.kjv-resources-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.kjv-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: var(--light);
+  border-radius: var(--radius-xl);
+  border: 3px solid var(--primary);
+}
+
+.kjv-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.kjv-content h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.kjv-content p {
+  font-family: var(--font-secondary);
+  font-size: 1.15rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.kjv-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ===== Print Styles ===== */
 @media print {
   .navbar,

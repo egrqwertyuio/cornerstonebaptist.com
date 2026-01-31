@@ -1,0 +1,10 @@
+# Git LFS configuration for large media files
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.MP4 filter=lfs diff=lfs merge=lfs -text
+*.MOV filter=lfs diff=lfs merge=lfs -text
+
+# Large images (over 1MB)
+assets/VBS2025/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/VBS2025/*.jpeg filter=lfs diff=lfs merge=lfs -text
+assets/VBS2025/*.png filter=lfs diff=lfs merge=lfs -text

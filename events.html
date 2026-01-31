@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="View upcoming events and photo galleries from Cornerstone Baptist Church">
+  <title>Events & Gallery - Cornerstone Baptist Church</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="Cornerstone Logo" class="nav-logo" />
+        <span class="nav-title">Cornerstone Baptist Church</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+        <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+        <li><a href="events.html" class="nav-link active">Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="index.html#online" class="nav-link nav-cta">Join Online</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <div class="page-header-content" data-aos="fade-up">
+        <h1>Events & Gallery</h1>
+        <p>Celebrating Faith Together</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Events</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Section -->
+  <section class="upcoming-events-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">What's Coming Up</span>
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="events-timeline">
+        <!-- Event 1 -->
+        <div class="event-item" data-aos="fade-right" data-aos-delay="100">
+          <div class="event-date-badge">
+            <div class="event-month">Every</div>
+            <div class="event-day">Sunday</div>
+          </div>
+          <div class="event-details">
+            <h3>Sunday Worship Services</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> 10:00 AM, 11:00 AM & 2:00 PM</span>
+              <span><i class="fas fa-map-marker-alt"></i> Cornerstone Baptist Church</span>
+            </div>
+            <p>Join us for Sunday School at 10:00 AM, Morning Worship at 11:00 AM, and Afternoon Worship at 2:00 PM. All are welcome!</p>
+            <a href="contact.html" class="event-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-item" data-aos="fade-right" data-aos-delay="200">
+          <div class="event-date-badge">
+            <div class="event-month">Every</div>
+            <div class="event-day">Wed</div>
+          </div>
+          <div class="event-details">
+            <h3>Wednesday Bible Study</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> 6:30 - 7:30 PM</span>
+              <span><i class="fas fa-map-marker-alt"></i> Cornerstone Baptist Church</span>
+            </div>
+            <p>Dive deeper into God's Word with our midweek Bible study. All ages are welcome to join us for teaching, discussion, and fellowship.</p>
+            <a href="contact.html" class="event-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Event 3 - VBS -->
+        <div class="event-item event-featured" data-aos="fade-right" data-aos-delay="300">
+          <div class="event-date-badge featured">
+            <div class="event-month">Summer</div>
+            <div class="event-day">VBS</div>
+          </div>
+          <div class="event-details">
+            <h3>Vacation Bible School <span class="featured-badge">Annual Event</span></h3>
+            <div class="event-meta">
+              <span><i class="fas fa-calendar"></i> Dates TBA</span>
+              <span><i class="fas fa-users"></i> All Children Welcome</span>
+            </div>
+            <p>Our annual VBS is a week of fun, learning, and growing in faith! Children enjoy Bible stories, crafts, games, music, and more. Check back for registration details for the next VBS.</p>
+            <a href="#vbs-gallery" class="event-link">View Gallery <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Event 4 - OCC -->
+        <div class="event-item" data-aos="fade-right" data-aos-delay="400">
+          <div class="event-date-badge">
+            <div class="event-month">Nov</div>
+            <div class="event-day">TBA</div>
+          </div>
+          <div class="event-details">
+            <h3>Operation Christmas Child Packing</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> Date to be announced</span>
+              <span><i class="fas fa-gift"></i> All ages welcome</span>
+            </div>
+            <p>Join us for our annual Operation Christmas Child shoebox packing event. Help bring joy to children around the world!</p>
+            <a href="ministries.html" class="event-link">Learn About OCC <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VBS Gallery Section -->
+  <section class="gallery-section vbs-gallery-section" id="vbs-gallery">
+    <div class="container">
+      <div class="section-header light" data-aos="fade-up">
+        <span class="section-subtitle">Memories</span>
+        <h2 class="section-title">VBS 2025 Gallery</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+        <div class="carousel-container" id="vbs-carousel">
+          <button class="carousel-btn prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="carousel-track" id="carouselTrack"></div>
+          <button class="carousel-btn next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+
+      <div class="gallery-description" data-aos="fade-up" data-aos-delay="300">
+        <p>Our Vacation Bible School is always a highlight of the summer! Browse through these photos to see the joy and excitement as children learn about Jesus through stories, crafts, games, and worship.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Church Life Gallery -->
+  <section class="church-life-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Our Community</span>
+        <h2 class="section-title">Church Life</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="life-gallery-grid">
+        <div class="life-photo" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/images/chapel.png" alt="Church Interior" />
+          <div class="photo-overlay">
+            <h3>Worship</h3>
+            <p>Gathering together in praise</p>
+          </div>
+        </div>
+        <div class="life-photo" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/images/logo2.png" alt="Fellowship" />
+          <div class="photo-overlay">
+            <h3>Fellowship</h3>
+            <p>Building meaningful relationships</p>
+          </div>
+        </div>
+        <div class="life-photo" data-aos="zoom-in" data-aos-delay="300">
+          <img src="assets/images/logo.png" alt="Community" />
+          <div class="photo-overlay">
+            <h3>Service</h3>
+            <p>Reaching out in love</p>
+          </div>
+        </div>
+        <div class="life-photo" data-aos="zoom-in" data-aos-delay="400">
+          <img src="assets/images/parking.png" alt="Church Parking" />
+          <div class="photo-overlay">
+            <h3>Welcome</h3>
+            <p>A place for everyone</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Events Info -->
+  <section class="special-events-section">
+    <div class="container">
+      <div class="special-events-content" data-aos="zoom-in">
+        <i class="fas fa-calendar-check"></i>
+        <h2>Stay Connected</h2>
+        <p>Don't miss out on upcoming events and special services! Follow us on social media or contact us to be added to our church mailing list.</p>
+        <div class="event-cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          <a href="index.html#online" class="btn btn-secondary">Join Online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-overlay"></div>
+    <img src="assets/images/parking.png" alt="Church Parking" class="footer-bg" />
+    <div class="footer-content">
+      <div class="container">
+        <div class="footer-grid" data-aos="fade-up">
+          <div class="footer-col">
+            <img src="assets/images/logo.png" alt="Cornerstone Logo" class="footer-logo" />
+            <h3>Cornerstone Baptist Church</h3>
+            <p>Building Lives on the Solid Rock of Christ</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="ministries.html">Ministries</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Service Times</h4>
+            <ul class="footer-info">
+              <li><i class="fas fa-clock"></i> Sunday School: 10:00 AM</li>
+              <li><i class="fas fa-clock"></i> Sunday Worship: 11:00 AM</li>
+              <li><i class="fas fa-clock"></i> Afternoon: 2:00 PM</li>
+              <li><i class="fas fa-clock"></i> Wednesday: 6:30 PM</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-contact">
+              <p><i class="fas fa-map-marker-alt"></i> 13455 Alexandria Pike<br>Butler, KY 41006</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Cornerstone Baptist Church | Serving Christ in Word and Fellowship</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

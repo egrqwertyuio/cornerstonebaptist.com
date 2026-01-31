@@ -3481,6 +3481,175 @@ button {
   flex-wrap: wrap;
 }
 
+/* ===== Mission Pillar Verses ===== */
+.pillar-verse {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+/* ===== Belief Card Verses ===== */
+.belief-verse {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* ===== Under Construction Section ===== */
+.under-construction-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--primary) 0%, #003d6b 100%);
+  color: white;
+  text-align: center;
+}
+
+.construction-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.construction-content i {
+  font-size: 4rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.construction-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.construction-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.construction-content .btn {
+  margin-top: 1rem;
+}
+
+.construction-note {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* ===== Centered Map Section ===== */
+.map-section {
+  padding: 4rem 0;
+  background: var(--light-gray);
+}
+
+.map-container-centered {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-container-centered .section-title {
+  margin-bottom: 1rem;
+}
+
+.map-container-centered .title-underline {
+  margin: 0 auto 2rem auto;
+}
+
+.map-container-centered .map-wrapper {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.map-container-centered .directions-info {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.map-container-centered .directions-info h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.map-container-centered .directions-info i {
+  margin-right: 0.5rem;
+  color: var(--accent);
+}
+
+/* ===== Operation Christmas Child Gallery ===== */
+.occ-gallery-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.occ-gallery-section .section-description {
+  max-width: 700px;
+  margin: 1rem auto 3rem auto;
+  text-align: center;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+}
+
+.occ-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.occ-gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  aspect-ratio: 4/3;
+}
+
+.occ-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.occ-gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.occ-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .occ-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .construction-content h2 {
+    font-size: 2rem;
+  }
+
+  .construction-content i {
+    font-size: 3rem;
+  }
+}
+
 /* ===== Print Styles ===== */
 @media print {
   .navbar,

@@ -1461,6 +1461,423 @@ button {
   }
 }
 
+/* ===== Page Header ===== */
+.page-header {
+  position: relative;
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: 100px 100px;
+  opacity: 0.3;
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-family: var(--font-secondary);
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-secondary);
+  font-size: 0.95rem;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  transition: var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-light);
+}
+
+.breadcrumb i {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ===== Mission Section ===== */
+.mission-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-statement {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.8;
+  text-align: center;
+  color: var(--dark);
+  font-weight: 600;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  border-left: 6px solid var(--accent);
+}
+
+.mission-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pillar-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
+}
+
+.pillar-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--white);
+  transition: var(--transition-normal);
+}
+
+.pillar-card:hover .pillar-icon {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  transform: scale(1.1);
+}
+
+.pillar-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.pillar-card p {
+  color: var(--gray);
+  line-height: 1.8;
+  font-family: var(--font-secondary);
+}
+
+/* ===== Beliefs Section ===== */
+.beliefs-section {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+}
+
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.belief-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.belief-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(242, 180, 40, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.belief-card:hover::before {
+  opacity: 1;
+}
+
+.belief-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.belief-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+.belief-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.belief-card p {
+  font-family: var(--font-secondary);
+  line-height: 1.7;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Pastor Section ===== */
+.pastor-section {
+  padding: var(--section-padding) 0;
+  background: var(--light);
+}
+
+.pastor-bio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.pastor-bio-image {
+  display: flex;
+  justify-content: center;
+}
+
+.bio-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 10px solid var(--white);
+}
+
+.bio-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pastor-bio-content h3 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.pastor-title {
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.pastor-bio-text p {
+  font-family: var(--font-secondary);
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.pastor-quote {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent);
+  margin-top: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pastor-quote i {
+  font-size: 2rem;
+  color: var(--accent);
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.pastor-quote p {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.pastor-quote footer {
+  font-family: var(--font-secondary);
+  font-size: 0.95rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===== History Section ===== */
+.history-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.history-text p {
+  font-family: var(--font-secondary);
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.history-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.history-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.history-image:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== Why Visit Section ===== */
+.why-visit-section {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+}
+
+.why-visit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.visit-reason {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+}
+
+.visit-reason:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.visit-reason i {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.visit-reason h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.visit-reason p {
+  font-family: var(--font-secondary);
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.visit-cta {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+}
+
+.visit-cta h3 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.visit-cta p {
+  font-size: 1.25rem;
+  font-family: var(--font-secondary);
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
 /* ===== Print Styles ===== */
 @media print {
   .navbar,
@@ -1472,12 +1889,12 @@ button {
   .scroll-top {
     display: none;
   }
-  
+
   .hero {
     height: auto;
     min-height: auto;
   }
-  
+
   * {
     box-shadow: none !important;
   }

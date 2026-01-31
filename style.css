@@ -455,6 +455,229 @@ button {
   font-family: var(--font-secondary);
 }
 
+/* ===== Pastor Welcome Section ===== */
+.pastor-welcome-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.pastor-welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.pastor-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pastor-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 8px solid var(--light);
+}
+
+.pastor-image-frame::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.pastor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.pastor-image-frame:hover .pastor-image {
+  transform: scale(1.05);
+}
+
+.pastor-welcome-text {
+  padding: 1rem;
+}
+
+.pastor-message {
+  margin: 2rem 0;
+  line-height: 1.9;
+  font-family: var(--font-secondary);
+  color: var(--gray);
+}
+
+.pastor-message p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+/* ===== Quick Links Section ===== */
+.quick-links-section {
+  padding: var(--section-padding) 0;
+  background: var(--light);
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.quick-link-card {
+  position: relative;
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick-link-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.quick-link-card:hover::before {
+  transform: scaleX(1);
+}
+
+.quick-link-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.quick-link-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.quick-link-card:hover .quick-link-icon {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  transform: rotate(360deg) scale(1.1);
+}
+
+.quick-link-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.quick-link-card p {
+  color: var(--gray);
+  line-height: 1.7;
+  font-family: var(--font-secondary);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.quick-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--light);
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.quick-link-card:hover .quick-link-arrow {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateX(5px);
+}
+
+/* ===== Call to Action Section ===== */
+.cta-section {
+  padding: var(--section-padding) 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: movePattern 15s linear infinite;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-family: var(--font-secondary);
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ===== About Section ===== */
 .about-section {
   padding: var(--section-padding) 0;

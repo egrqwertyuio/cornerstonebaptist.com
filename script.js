@@ -140,7 +140,7 @@ function createSlide(item) {
   
   if (type === 'image') {
     const img = document.createElement('img');
-    img.dataset.src = src;
+    img.src = src;
     img.alt = item.name || 'VBS 2025 Photo';
     slide.appendChild(img);
   } else if (type === 'video') {
@@ -197,23 +197,9 @@ function initCarousel(items) {
   // Create dots
   const dots = createDots(slides.length, jumpToSlide);
   
-  function loadSlideImage(index) {
-    if (index < 0 || index >= slides.length) return;
-    const img = slides[index].querySelector('img[data-src]');
-    if (img) {
-      img.src = img.dataset.src;
-      delete img.dataset.src;
-    }
-  }
-
   function updateCarousel() {
     const offset = -currentIndex * 100;
     track.style.transform = `translateX(${offset}%)`;
-
-    // Load current slide and one ahead/behind
-    loadSlideImage(currentIndex - 1);
-    loadSlideImage(currentIndex);
-    loadSlideImage(currentIndex + 1);
 
     // Update dots
     dots.forEach((dot, index) => {

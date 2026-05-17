@@ -6,16 +6,6 @@
   "data": {
     "VBS2025": [
       {
-        "name": "20250624_184154.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_184154.mp4"
-      },
-      {
-        "name": "20250624_184332.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_184332.mp4"
-      },
-      {
         "name": "20250624_184356.jpg",
         "kind": "image",
         "url": "assets/VBS2025/20250624_184356.jpg"
@@ -29,11 +19,6 @@
         "name": "20250624_184415.jpg",
         "kind": "image",
         "url": "assets/VBS2025/20250624_184415.jpg"
-      },
-      {
-        "name": "20250624_185148.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_185148.mp4"
       },
       {
         "name": "20250624_185807.jpg",
@@ -104,11 +89,6 @@
         "name": "20250624_190212.jpg",
         "kind": "image",
         "url": "assets/VBS2025/20250624_190212.jpg"
-      },
-      {
-        "name": "20250624_190221.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_190221.mp4"
       },
       {
         "name": "20250624_190305.jpg",
@@ -431,16 +411,6 @@
         "url": "assets/VBS2025/20250624_195957.jpg"
       },
       {
-        "name": "20250624_200044.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_200044.mp4"
-      },
-      {
-        "name": "20250624_200119.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_200119.mp4"
-      },
-      {
         "name": "20250624_200258.jpg",
         "kind": "image",
         "url": "assets/VBS2025/20250624_200258.jpg"
@@ -481,19 +451,9 @@
         "url": "assets/VBS2025/20250624_200636.jpg"
       },
       {
-        "name": "20250624_201433.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_201433.mp4"
-      },
-      {
         "name": "20250624_201704.jpg",
         "kind": "image",
         "url": "assets/VBS2025/20250624_201704.jpg"
-      },
-      {
-        "name": "20250624_201729.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_201729.mp4"
       },
       {
         "name": "20250624_201859.jpg",
@@ -501,29 +461,9 @@
         "url": "assets/VBS2025/20250624_201859.jpg"
       },
       {
-        "name": "20250624_201952.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_201952.mp4"
-      },
-      {
-        "name": "20250624_202014.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_202014.mp4"
-      },
-      {
-        "name": "20250624_202446.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_202446.mp4"
-      },
-      {
         "name": "20250624_202552.jpg",
         "kind": "image",
         "url": "assets/VBS2025/20250624_202552.jpg"
-      },
-      {
-        "name": "20250624_202608.mp4",
-        "kind": "video",
-        "url": "assets/VBS2025/20250624_202608.mp4"
       },
       {
         "name": "20250624_202843.jpg",

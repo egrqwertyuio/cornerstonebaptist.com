@@ -180,17 +180,10 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
-  transition: all var(--transition-normal);
-  padding: 1rem 0;
-}
-
-.navbar.scrolled {
   background: var(--white);
   box-shadow: var(--shadow-md);
   padding: 0.5rem 0;
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -219,13 +212,9 @@ button {
 .nav-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--white);
-  transition: var(--transition-normal);
-}
-
-.navbar.scrolled .nav-title {
   color: var(--primary);
 }
+
 
 .nav-menu {
   display: flex;
@@ -237,7 +226,7 @@ button {
   font-family: var(--font-secondary);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--white);
+  color: var(--secondary);
   padding: 0.5rem 0;
   position: relative;
   transition: var(--transition-fast);
